@@ -43,7 +43,11 @@ Dogway: This is the same as zfast_crt_geo but without the screen curvature for e
 #endif
 
 #ifdef GL_ES
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+#define COMPAT_PRECISION highp
+#else
 #define COMPAT_PRECISION mediump
+#endif
 #else
 #define COMPAT_PRECISION
 #endif
