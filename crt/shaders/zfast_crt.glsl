@@ -52,7 +52,11 @@ Notes:  This shader does scaling with a weighted linear filter for adjustable
 #endif
 
 #ifdef GL_ES
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+#define COMPAT_PRECISION highp
+#else
 #define COMPAT_PRECISION mediump
+#endif
 #else
 #define COMPAT_PRECISION
 #endif
